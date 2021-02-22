@@ -1,0 +1,272 @@
+/*-----------------------------------------------------------------------------------*/
+/*  Lists
+/*-----------------------------------------------------------------------------------*/
+
+ul, 
+ol {
+  margin: 0 0 30px 0;
+  padding-left: 40px;
+  list-style-position: inside;
+}
+
+ul {
+    list-style: none;
+    ul {
+        margin: 0;
+    } 
+}
+
+ol {
+    list-style: decimal;
+    ol {
+        margin: 0;
+        list-style: lower-alpha;
+        
+        ol {
+            list-style: lower-roman;
+        }
+    }
+} 
+
+li {
+  & > ul, 
+  & > ol {
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}
+
+
+.entry-content {
+    ul {
+        padding-left: 50px;
+	
+	 li {
+		position: relative;
+		padding: 0 0 0 24px;
+		list-style-position: outside;
+		list-style-type: none;
+		
+		&:before {
+		    @extend .fa;
+                    @extend .fa-chevron-circle-right;
+                    margin-right: 10px;
+                    margin-left: -24px;
+                    
+		}
+		
+		ul {
+		    padding-left: 50px;
+
+		    li {
+			padding-left: 24px;
+                        
+                        &:before {
+                            @extend .fa;
+                            @extend .fa-chevron-circle-right;
+                        }
+                        
+                        li {
+                            display: list-item;
+                            list-style-type: circle;
+                            padding-left: 0px;
+                            &:before {
+                                content: "";
+                                margin-right: 0;
+                                margin-left: 0;
+                            }
+                        }
+		    } 
+		}
+		ol li:before {
+		    display: none;
+		}
+	}
+            
+        ul {
+            padding-left: 50px; 
+        }
+        &.default {
+            li {
+                display: list-item;
+                padding: 0;
+                list-style-type: circle;
+                &:before {
+                    content: "";
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                
+                li {
+                     list-style-type: square;
+
+                     li {
+                         list-style-type: disc ; 
+                     }
+                }
+            }
+        }
+        &.nolist {
+            li {
+                @include no-list;
+            }
+            li:before {
+                display: none;
+            }
+        }
+	
+	&.sign {
+	    li {
+                list-style-type: none;
+                padding-left: 30px;
+                margin-left: 20px;
+                background-image:url(../img/signet-maincolor-24.gif);
+                background-repeat:no-repeat;
+                background-position:left 3px;
+		display: list-item;
+                
+                &:before {
+                    content: "";
+                     margin: 0;
+                }
+                
+		ul li {
+                    background-image: none;
+		    list-style-type:  circle; 
+		    list-style-image: none;
+                    padding: 0;
+                    margin: 0;
+                    
+		    ul li {
+			 list-style-type: square; 
+                       
+		    }
+		}
+                ol li {
+                    background-image: none;
+                    padding: 0;
+                    margin: 0;
+                }
+	    }
+            &.grau {
+                li {
+                    background-image:url(../img/signet-grau-24.gif);
+                }
+            }
+            &.secondcolor {
+                li {
+                    background-image:url(../img/signet-secondcolor-24.gif);
+                }
+            }
+	}
+        
+        
+	&.line {
+	    li {
+		position: relative;
+		padding: 0 0 0 24px;
+		list-style-position: outside;
+		list-style-type: none;
+		
+		&:before {
+		    vertical-align: top;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    content: '\2013';		
+		    padding: 0;
+                    margin-left: 0;
+                    margin-right: 0;
+		}
+		
+		ul {
+		    padding-left: 50px;
+
+		    li {
+			padding-left: 24px;
+		    } 
+		}
+		ol li:before {
+		    display: none;
+		}
+	    }
+	}
+        &.textlist {
+            @extend .nolist;
+            margin-left: 0;
+            padding-left: 0;
+            
+            li {
+                padding-left: 0;
+                display: inline;
+            }
+        }
+    }
+    ol {
+        padding-left: 70px;
+        li {
+          padding-left: 4px;
+          list-style-position: outside;
+        }
+        ol {
+             padding-left: 50px;
+        }
+        ul {
+            li {
+                padding-left: 24px;
+            }
+        }
+    }
+
+}
+
+.comment-text {
+    ul, 
+    ol {
+        margin: 0 0 15px;
+        padding-left: 20px;
+    }
+    
+    li {
+        position: relative;
+        padding: 0 0 0 24px;
+    }
+    ul li:before {
+        vertical-align: top;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '\2013';
+        padding: 0;
+    }
+    ul li {
+        ul li {
+            padding-left: 24px;
+        }
+        ol li:before {
+          display: none;
+        }
+
+    }
+    ol ul li {
+        padding: 0 0 0 24px;
+    }
+}
+
+#comments {
+  ul ul, ol ol {
+    padding-left: 50px;
+  }
+}
+
+.fontawesome-icon-list {
+    
+    a {
+	text-decoration: none;
+	
+	i {
+	    color: $color-text;
+	    min-width: 2em;
+	}
+    }
+}

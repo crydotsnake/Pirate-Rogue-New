@@ -1,0 +1,190 @@
+/*-----------------------------------------------------------------------------------*/
+/*  Pagination + Infinite Scroll
+/*-----------------------------------------------------------------------------------*/
+
+.pagination {
+  position: relative;
+  clear: both;
+  padding: 18px 20px;
+  border: 2px solid $color-border;
+  @include px2rem( $font-size-smaller);
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: $color-text;
+  margin-bottom: 25px;
+  
+  a {
+    color: $color-second;
+  }
+  .nav-links {
+    span,
+    a { 
+        &.page-numbers  {
+            background: $color-page-background;
+            color: $color-second;
+            overflow: hidden;
+            display: inline-block;
+            min-width: 25px;
+            height: 25px;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 50%;
+            padding-left: 2px;
+        
+            &:hover,
+            &:focus {
+              background-color: $color-main;
+              color: #fff;
+
+            }
+        }
+        &.page-numbers.prev, 
+        &.page-numbers.next {
+            padding: 0 5px;
+            border-radius: inherit;
+            &:hover, &:focus {
+                color:  $color-page-background;
+                background: $color-main;
+            }
+        }
+      &.next.page-numbers:focus, 
+      &.prev.page-numbers:focus,
+      &.next.page-numbers:hover, 
+      &.prev.page-numbers:hover {
+        text-decoration: none;
+      }
+    }
+    text-align: center;
+  }
+}
+
+.single-attachment {
+     .post-navigation {
+        overflow: hidden;
+        clear: both;
+        padding-top: 60px;
+      }
+      .nav-previous {
+        float: left;
+      }
+      .nav-next {
+        float: right;
+      }
+      .post-navigation a {
+        position: relative;
+        display: block;
+        @include px2rem( $font-size-smaller);
+        line-height: 1.15;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        border-bottom: 2px solid $color-text;
+      }
+}
+
+
+
+
+#nav-comments {
+  padding: 10px 0;
+  clear: both;
+  overflow: hidden;
+  .nav-previous {
+    float: right;
+  }
+}
+
+
+.page-links {
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-top: 20px;
+    
+    .post-page-numbers {
+        padding: 4px;
+        text-decoration: none;
+
+        &.current {
+             color: $color-second;
+        }
+        
+        a {
+                .number {
+                   @include px2rem($font-size-small);
+                }
+        }
+        
+        a:hover {
+            background-color: #ddd;
+        } 
+    }
+}
+
+
+.single-post {
+    .post-navigation {
+            clear: both;
+            display: block;
+            margin: 20px 0;
+            
+            .nav-next, 
+            .nav-previous {
+                display: inline;
+            }
+            
+            .nav-next {
+                text-align: right;
+                @media screen and (min-width:$breakpoint-sm) {
+                    text-align: left;
+                }
+            } 
+           
+    }
+        
+    .pagebreak-links {
+           margin: 10px 0;
+    }
+     
+     
+    .post-navigation,
+    .pagebreak-links {
+     
+        a {
+            padding: 5px;
+            margin-right: 5px;
+            margin-top: 5px;
+             
+            
+            width: 100%;
+            display: block;
+            @media screen and (min-width:$breakpoint-sm) {
+                width: inherit;
+                display: inline;             
+            }
+        }
+        .next,
+        .prev {
+            padding: 2px 4px;
+           
+        }
+        .next {
+            text-align: right;
+            @media screen and (min-width:$breakpoint-sm) {
+                text-align: left;
+            }
+        } 
+        
+        .next:after {
+           margin-left: 5px;
+           @extend .fa;
+           content:  $fa-var-chevron-circle-right;;
+        }
+         .prev:before {
+             margin-right: 5px;
+            @extend .fa;
+            @extend .fa-chevron-circle-left;
+        }
+    }
+}

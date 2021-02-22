@@ -1,0 +1,145 @@
+/*-----------------------------------------------------------------------------------*/
+/* Display of meta elements, like tags, categories, timestampts and so on
+/*-----------------------------------------------------------------------------------*/
+.entry-meta, 
+.entry-cats {
+    @include px2rem($font-size-xsmall); 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    a {
+	text-decoration: none; 
+    }
+}
+
+.entry-meta {
+    display: block;
+    clear: both;
+    
+    .entry-tags ul {
+	margin: 0;
+	padding: 0;
+    }
+}
+
+#primary .hentry {
+    .entry-date, 
+    .entry-edit {
+      display: block;
+    }
+    .entry-date {
+      padding-bottom: 8px;
+    }
+}
+
+.featured-slider .entry-cats a, 
+.section-one-column-one .entry-cats a, 
+.section-three-column-one .entry-cats a, 
+#front-section-four .entry-cats a, 
+.single-post .entry-cats a {
+    padding: 3px 5px;
+    margin: 0 2px 4px 0;
+}
+
+
+.section-one-column-one {
+  .entry-cats {
+    position: absolute;
+    top: 37px;
+    left: 17px;
+  }
+}
+.section-three-column-two {
+  .entry-cats {
+    display: none;
+  }
+}
+
+.search-results .entry-cats a:nth-child(n+2):before, 
+.archive .entry-cats a:nth-child(n+2):before {
+  content: ' / ';
+  padding: 0 2px;
+}
+
+
+
+.single-post {
+    .entry-header {
+        @include px2rem($font-size-small);
+	.entry-cats {
+	    display: block;
+            text-align: right;
+	    a {
+		display: inline-block;
+	    }
+	}
+    }
+
+    .entry-tags {
+        @include px2rem($font-size-small);
+    } 
+}
+
+
+.blog {
+    #primary .hentry.has-post-thumbnail:nth-child(4n+1) .entry-cats a:before, 
+      .section-one-column-one .entry-cats a:before, 
+      .section-three-column-one .entry-cats a:before, 
+      #front-section-four .entry-cats a:before {
+    	display: none;
+    }
+    .hentry .entry-cats a {
+	display: none;
+
+	&:nth-child(1), 
+	&:nth-child(2),
+	&:nth-child(3),
+	&:nth-child(4) {
+	    display: inline;
+	}
+    }
+    .entry-cats a:nth-child(n+2):before {
+	content: ' / ';     
+    }
+
+    
+ 
+    
+    #primary .hentry.has-post-thumbnail:nth-child(4n+1) {
+	.entry-cats a {
+	    padding: 2px 5px;
+            display: inline;
+	}
+	.entry-date, 
+	.entry-comments, 
+	.entry-edit, 
+	.entry-author {
+	    display: inline-block;
+	    padding-bottom: 0;
+	}
+	.entry-date {
+	    padding-right: 20px;
+	}
+    }
+}
+
+
+.front_hidecats {
+    .blog .entry-cats {display: none !important;}
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+    .single-post .hentry .entry-meta, 
+    .single-attachment .hentry .entry-meta, 
+    .shortcode-section a.all-posts-link,
+    .front-section a.all-posts-link {
+	@include px2rem($font-size-smaller); 
+    }
+    .single-post {
+        .canonical-link,  
+        .entry-tags  {
+            @include px2rem($font-size-smaller); 
+        }
+    }
+}
+

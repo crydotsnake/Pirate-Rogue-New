@@ -1,0 +1,240 @@
+/*-----------------------------------------------------------------------------------*/
+/* Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+
+/* Minimum width of 1024 pixels (tablet landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: $breakpoint-1024) {
+    p.text-big {
+	font-size: 32px;
+	font-size: 2rem;
+    }
+    .front-about-img {
+	width: 32.8%;
+	padding-right: 1.6%;
+    }
+ 
+}
+
+/* Minimum width of 1060 pixels (small desktop screens)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: $breakpoint-1060) {
+  /* --- General --- */
+ 
+    .headerimg-on.header-boxed #masthead {
+	border-bottom: 1px solid #ddd !important;
+    }
+    .front-section:first-of-type {
+	padding-top: 0;
+    }
+
+  
+
+    .content-wrap {
+	margin-top: 0;
+    }
+ 
+  /* --- Image Fade In --- */
+  .js .imgfade-on .fadein {
+	opacity: 0;
+	transition: opacity 0.7s ease-in-out;
+	-webkit-transition: opacity 0.7s ease-in-out;
+	-webkit-transform: translateZ(0);
+	&.inview {
+	    opacity: 1;
+	}
+  }
+
+ 
+  .singlepost-wrap, 
+  .recommended-posts-wrap, 
+  .front-section, 
+  .headerimg-on.header-boxed .header-image {
+	padding-left: 0;
+	padding-right: 0;
+  }
+  .blog-wrap, 
+  .front-section, 
+  .singlepost-wrap, 
+  .recommended-posts-wrap, 
+  .footer-wrap, 
+  .big-footer-feature, 
+  .headerimg-on.header-boxed .header-image {
+	margin-left: 6.25%;
+	margin-right: 6.25%;
+  }
+
+  #front-section-four {
+	margin-left: auto;
+	margin-right: auto;
+  }
+  
+  .page .site-content,
+  #primary {
+	width: 65.87301587301587%;
+	// 830px at 1440px 
+	float: left;
+  }
+
+  #secondary, 
+  #sidebar-page {
+	width: 31.74603174603175%;
+	/* -- 400px at 1440px ---*/
+	float: right;
+	padding-top: 0;
+  }
+  /* --- Left and no Sidebar Options --- */
+  .sidebar-left #primary, 
+  .single-post.sidebar-left .contentwrap {
+	float: right;
+  }
+
+  
+  .sidebar-left {
+    #secondary, #sidebar-page {
+	float: left;
+	padding-top: 0;
+    }
+  }
+  .no-sidebar.page .site-content,
+  .no-sidebar #primary {
+	width: 90%;
+	max-width: 1260px;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  
+  .page-fullwidth .site-content,
+  .page-fullwidth #primary {
+	width: 100% !important;
+	max-width: none;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+  }
+ 
+ 
+  /* --- Font Sizes --- */
+
+  p.site-title {
+	font-size: 60px;
+	font-size: 3.75rem;
+	line-height: 1.35;
+	text-align: center;
+	padding-right: 0;
+  }
+  p.text-big {
+	font-size: 48px;
+	font-size: 3rem;
+  }
+  
+
+ 
+  .section-one-column-one {
+    .entry-author, .entry-date:before {
+      display: inline-block;
+    }
+  }
+
+  .headerimg-on.header-boxed .header-image {
+    margin-top: 30px;
+  }
+  
+  /* --- Front Section One --- */
+  
+  .page-template-shop-front {
+    .entry-text-wrap {
+      width: 48.80952380952381%;
+      /* -- 615px at 1440px ---*/
+      float: left;
+      clear: left;
+    }
+    .section-three-column-one {
+      .entry-header, 
+      .entry-summary, 
+      .entry-meta {
+        width: 100%;
+      }
+    }
+  }
+  
+
+
+
+}
+
+/* Minimum width of 1360 pixels (larger desktop screens)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 85em) {
+ 
+ .blog-wrap, 
+  .front-section, 
+ // .singlepost-wrap, 
+ // .recommended-posts-wrap, 
+ // .footer-wrap, 
+//  .big-footer-feature, 
+  .headerimg-on.header-boxed .header-image {
+	margin-left: auto;
+	margin-right:auto;
+	width: 80%;
+  }
+  /* --- Typography --- */
+  .entry-content p {
+    &.pull-left, &.pull-right {
+      margin-bottom: 20px;
+    }
+  }
+ 
+  /* --- No Sidebar --- */
+  .no-sidebar.page .site-content,
+  .no-sidebar #primary {
+    width: 80%;
+  }
+  
+  .headerimg-on.header-fullscreen a.header-image {
+    max-height: 900px !important;
+    overflow: hidden;
+  }
+}
+
+/* Minimum width of 1800 pixels (larger desktop screens)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 112.5em) {
+  /* --- General --- */
+  
+  #page-start,
+  .content-wrap,
+  .singlepost-wrap, 
+  .blog-wrap {
+    min-width: 1560px;     
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .footer-wrap, 
+  .blog-wrap,
+  .big-footer-feature, 
+  .headerimg-on.header-boxed .header-image {
+    width: 70%;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+/* Minimum width of 2200 pixels (larger desktop screens)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 137.5em) {
+  /* --- General --- */
+ 
+
+  .footer-wrap, 
+  .big-footer-feature, 
+  .headerimg-on.header-boxed .header-image {
+    width: 56%;
+  }
+ 
+}

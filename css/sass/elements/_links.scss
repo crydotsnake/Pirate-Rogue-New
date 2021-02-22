@@ -1,0 +1,53 @@
+/*
+Links and colors
+*/
+
+a {
+    text-decoration: none;
+    .entry-content &, 
+    .comment-text & {
+        font-weight: bold;
+    }
+    .author-bio &,
+    .textwidget & {
+        text-decoration: underline;
+    }
+}
+
+#secondary h2.widget-title, 
+#sidebar-page h2.widget-title  {
+  text-decoration: none;
+}
+
+#primary #infinite-handle span:focus, 
+#front-section-three a.all-posts-link:focus, 
+#offcanvas-widgets-open:focus,
+#primary #infinite-handle span:hover, 
+#front-section-three a.all-posts-link:hover, 
+#offcanvas-widgets-open:hover,
+.offcanvas-widgets-show #offcanvas-widgets-open {
+    border-style: solid;
+    border-width: 2px;
+}
+
+.comments-show #comments-toggle,
+#comments-toggle:focus,
+#comments-toggle:hover {
+    border-style: solid;
+    border-width: 2px;
+}
+
+
+.desktop-search input.search-field {
+    &:active, 
+    &:focus {
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+    }
+}
+
+.wp-caption-text {
+    a {
+        line-height: 1.6em;
+    }
+}

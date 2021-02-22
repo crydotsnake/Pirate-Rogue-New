@@ -1,0 +1,107 @@
+/*-----------------------------------------------------------------------------------*/
+/*  Tables
+/*-----------------------------------------------------------------------------------*/
+
+table {
+    line-height: 2;
+    @include px2rem($font-size-tables);
+    border-collapse: collapse;
+    border-bottom-width: 1px;
+    border-bottom-style: solid; 
+    border-spacing: 0;
+    border-width: 1px;
+    margin: 0 0 1.6em;   
+    width: 100%;
+    
+    &.sorttable {
+	thead {
+	    cursor: pointer;	    
+	}
+    }
+    
+    &.center {
+	th, td {
+	    text-align: center;
+	}
+    }
+    &.right {
+	td {
+	    text-align: right;
+	}
+    }
+    thead {
+	th {
+	    border-bottom-width: 2px;
+             border-bottom-style: solid;	
+	}
+    }
+    &.long, 
+    &.border {
+	td {
+	    border-bottom-width: 1px;
+            border-bottom-style: solid;	
+	}
+    }
+ 
+}
+
+caption, th, td {
+    font-weight: normal;
+    text-align: left;
+    vertical-align: top;
+}
+caption {
+    padding: 3px 5px;
+    font-style: italic;
+    margin: 40px 0;
+    
+    &.right {
+	text-align: right;
+    }
+    &.center {
+	text-align: center;
+    }
+}
+
+th {
+    font-weight: bold;
+}
+th, td {
+    padding: 0.4em;
+}
+    
+th.right,
+td.right {
+    text-align: right;
+}
+
+th.center,
+td.center {
+    text-align: center;
+}
+@media screen and (max-width: $breakpoint-sm) {
+	
+	table, tr, td {
+		padding:0;
+	}
+
+	table {
+		border:none;
+	}
+
+	thead {
+		display:none;
+	}
+
+	tr {
+		float: left;
+		width: 100%;
+		margin-bottom: 2em;
+	}
+
+	td {
+		float: left;
+		width: 100%;
+		padding:1em;
+	}
+}

@@ -1,0 +1,240 @@
+/*-----------------------------------------------------------------------------------*/
+/* Buttons
+/*-----------------------------------------------------------------------------------*/
+
+
+.box {
+  margin: 0 0 30px;
+  padding: 20px;
+  overflow: hidden;
+  line-height: 1.4;
+  
+  a {
+      font-weight: bold;
+  }
+}
+
+.site-content .box p {
+  margin: 0 0 30px;
+}
+
+.white-box {
+  border: 3px solid #fff;
+   &.invertbox {
+    background: darken( #fff, 10%);
+  }
+}
+
+.blue-box {
+  border: 3px solid $color-shortcodes-blue;
+  
+  &.invertbox {
+    background: lighten( $color-shortcodes-blue, 10%);
+  }
+}
+
+.yellow-box {
+  border: 3px solid $color-shortcodes-yellow;
+   &.invertbox {
+    background: lighten( $color-shortcodes-yellow, 10%);
+  }
+}
+
+.red-box {
+  border: 3px solid $color-shortcodes-red;
+   &.invertbox {
+    background: lighten( $color-shortcodes-red, 10%);
+  }
+}
+
+.green-box {
+  border: 3px solid $color-shortcodes-green;
+  &.invertbox {
+    background: lighten( $color-shortcodes-green, 10%);
+  }
+}
+
+.lightgrey-box {
+  border: 3px solid $color-shortcodes-lightgrey;
+   &.invertbox {
+    background: lighten( $color-shortcodes-lightgrey, 10%);
+  }
+}
+
+.grey-box {
+  border: 3px solid $color-shortcodes-grey;
+    &.invertbox {
+    background: lighten( $color-shortcodes-grey, 10%);
+  }
+}
+
+.dark-box {
+  border: 3px solid $color-shortcodes-dark;
+   &.invertbox {
+    background: lighten( $color-shortcodes-dark, 10%);
+    color: #fff;
+  
+  }
+}
+
+.maincolor-box {
+  border: 3px solid $color-shortcodes-maincolor;
+  a {
+      color: $color-shortcodes-maincolor;
+  }
+  &.invertbox {
+        background: lighten( $color-shortcodes-maincolor, 10%);
+        a {
+            color: $color-text;
+        }
+  }
+}
+
+.secondcolor-box {
+  border: 3px solid $color-shortcodes-secondcolor;
+  
+  a {
+      color: $color-shortcodes-secondcolor;
+  }
+   &.invertbox {
+        background: lighten( $color-shortcodes-secondcolor, 10%);
+        color: #fff;
+  }
+}
+/* --- Buttons --- */
+
+a.standard-btn {
+  display: inline-block;
+  margin: 0 0 30px;
+  padding: 10px 18px;
+  overflow: hidden;
+  cursor: pointer;
+  background: $color-text;
+  color: #fff;
+  font-size: 16px;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: normal;
+  text-decoration: none !important;
+  -webkit-transition: 0.2s background ease;
+  -moz-transition: 0.2s background ease;
+  -o-transition: 0.2s background ease;
+  -ms-transition: 0.2s background ease;
+  transition: 0.2s background ease;
+  
+    &:focus, 
+    &:hover {
+        background: lighten($color-text, 35%);
+    }
+}
+
+.post .entry-content a.standard-btn, 
+.page .entry-content a.standard-btn, 
+.post .entry-content a.standard-btn:hover,
+.page .entry-content a.standard-btn:hover {
+  color: #fff;
+  border: none;
+}
+
+a.standard-btn {
+  &.xsmall-btn {
+    padding: 5px 10px 3px;
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+  &.small-btn {
+    padding: 7px 12px 5px;
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+  &.large-btn {
+    padding: 14px 20px 13px;
+    font-size: 23px;
+    font-size: 1.4375rem;
+  }
+  &.xlarge-btn {
+    padding: 18px 30px 17px;
+    font-size: 25px;
+    font-size: 1.5625rem;
+  }
+  
+  &.red-btn {
+    background: $color-shortcodes-red;
+    &:focus, 
+    &:hover {
+        background: darken($color-shortcodes-red, 15%);
+    }
+  }
+  &.green-btn {
+    background: $color-shortcodes-green;
+    &:focus, 
+    &:hover {
+        background: darken($color-shortcodes-green, 15%);
+    }
+  }
+  &.blue-btn {
+    background: $color-shortcodes-blue;
+    &:focus, 
+    &:hover {
+        background: darken($color-shortcodes-blue, 15%);
+    }
+  }
+  &.yellow-btn {
+    background: $color-shortcodes-yellow;
+    &:focus, 
+    &:hover {
+        background: darken($color-shortcodes-yellow, 15%);
+    }
+  }
+  &.grey-btn {
+    background: $color-shortcodes-grey;
+    &:focus, 
+    &:hover {
+        background: darken($color-shortcodes-grey, 15%);
+    }
+  }
+  &.black-btn {
+    background: $color-shortcodes-black;
+    &:focus, 
+    &:hover {
+        background: darken(#fff, 65%);
+    }
+  }
+  &.maincolor-btn {
+    background: $color-main;
+    &:focus, 
+    &:hover {
+        background: $color-shortcodes-secondcolor;
+    }
+  }
+  &.secondcolor-btn {
+    background: $color-shortcodes-secondcolor;
+    &:focus, 
+    &:hover {
+        background: $color-main;
+    }
+  }
+}
+
+
+.footer-feature-btn {
+    display: inline-block;
+    margin: 20px 0 0 0;
+    padding: 18px 30px;
+    background: none;
+    border: 2px solid $color-main;
+    background: $color-main;
+    color:  $color-page-background;
+
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    outline: none;
+    font-weight: 500;
+
+    &:focus,
+    &:hover {
+	  border-color: $color-second;
+	  background: $color-second;  
+    }
+}
+
